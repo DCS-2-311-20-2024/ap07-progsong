@@ -33,6 +33,7 @@ function init() {
     gui.add(param,"background").name("背景");
     gui.add(param,"follow").name("追跡");
     gui.add(param,"birdsEye").name("俯瞰");
+    gui.add(param,"course").name("コース");
   gui.add(param, "axes").name("座標軸");
 
   // シーン作成
@@ -222,6 +223,8 @@ function init() {
       camera.up.set(0,1,0)//カメラの上をy軸正の向きにする
     }
     // コース表示の有無
+    
+    courseObject.visible = param.course;
     
     // 座標表示の有無
     axes.visible = param.axes;
